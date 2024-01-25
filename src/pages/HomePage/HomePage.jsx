@@ -1,12 +1,13 @@
-import React from "react";
+import "./HomePage.scss";
 import MyDrawer from "../../Components/Drawer/Drawer";
+import homepage from "../../assets/images/homepage.png";
 
 const HomePage = () => {
   return (
-    <div>
-      <div>HomePage</div>
+    <main className="home-wrapper">
+      <img src={homepage} style={{ width: "100%" }} />
       <MyDrawer />
-    </div>
+    </main>
   );
 };
 
