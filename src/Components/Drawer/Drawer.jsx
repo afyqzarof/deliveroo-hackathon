@@ -12,7 +12,7 @@ export default function MyDrawer() {
   return (
     <Drawer.Root>
       <Drawer.Trigger asChild>
-        <button>Open Drawer</button>
+        <button className="cta-address">Change to gift address</button>
       </Drawer.Trigger>
       <Drawer.Portal>
         <Drawer.Overlay className="overlay" />

@@ -1,6 +1,21 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variable" as *;
 
+.cta-address {
+  background-color: $primary-main;
+  display: flex;
+  width: 12.8125rem;
+  height: 2.5rem;
+  padding: 0.5rem 0rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
 .overlay {
   position: fixed;
   top: 0;

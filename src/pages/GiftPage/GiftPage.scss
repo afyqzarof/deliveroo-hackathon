@@ -1,8 +1,39 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variable" as *;
 
+.background {
+  background-color: #f4f4ec;
+}
+
 .buffer {
   height: 2rem;
   background-color: $primary-main;
   margin: 0;
+  width: 100%;
+}
+
+.buffer-down {
+  height: 2rem;
+  background-color: #f4f4ec;
+  margin: 0;
+  width: 100%;
+}
+
+.gift-section {
+  padding: 0 1rem;
+  background-color: #f9fbfa;
+
+  &__words {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.btn-wrapper {
+  transform: translateY(-2rem);
+  border-radius: 0.3125rem;
+  background: #fff;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  @include flex(row, space-between);
+  padding: 1rem;
 }
