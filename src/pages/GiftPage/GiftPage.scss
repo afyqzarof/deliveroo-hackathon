@@ -1,0 +1,8 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.buffer {
+  height: 2rem;
+  background-color: $primary-main;
+  margin: 0;
+}
