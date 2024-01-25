@@ -1,7 +1,14 @@
 import { Drawer } from "vaul";
 import "./Drawer.scss";
+import AddressOption from "../AddressOption/AddressOption";
 
 export default function MyDrawer() {
+  const locationArray = [
+    "Current location",
+    "603 Lantana heights, Glasshouse Gardens, London, E20 1HR",
+    "5D Insignia Point, 2 Celebration Ave, East Village, London, E20 1DB",
+    "55-57 Rivington St, London EC24 3QA",
+  ];
   return (
     <Drawer.Root>
       <Drawer.Trigger asChild>
@@ -11,14 +18,16 @@ export default function MyDrawer() {
         <Drawer.Overlay className="overlay" />
         <Drawer.Content className="overlay__content">
           <div className="wrapper">
-            <div className="wrapper__wrapper" />
             <div style={{ maxWidth: "28rem" }}>
-              <h1>Unstyled drawer for React.</h1>
-
-              <p>
-                This component can be used as a replacement for a Dialog on
-                mobile and tablet devices.
-              </p>
+              <h1 className="wrapper__title">Deliver to...</h1>
+              <div>
+                <button className="wrapper__address">+ New address</button>
+              </div>
+              <form>
+                {locationArray.map((el, index) => (
+                  <AddressOption address={el} id={index} key={el} />
+                ))}
+              </form>
             </div>
           </div>
         </Drawer.Content>
