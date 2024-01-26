@@ -25,8 +25,7 @@ const PersonalMessage = ({ setWriteMessage, setMessage, message }) => {
           }}
           placeholder="E.g. Happy Birthday"
           className="body_text"
-          defaultValue={message ? message : ""}
-        ></textarea>
+          defaultValue={message ? message : ""}></textarea>
       </div>
       <img className="brder-btm" src={personal_btm_brder} />
       <div className="save">
@@ -34,8 +33,7 @@ const PersonalMessage = ({ setWriteMessage, setMessage, message }) => {
           className="save_button"
           onClick={() => {
             setWriteMessage(false);
-          }}
-        >
+          }}>
           Save
         </button>
       </div>

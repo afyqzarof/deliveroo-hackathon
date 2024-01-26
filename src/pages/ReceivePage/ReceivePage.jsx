@@ -26,7 +26,15 @@ const ReceivePage = () => {
     }, 8000);
   }, []);
 
-  return <div>{!isArrive ? <img src={map1} /> : <img src={map2} />}</div>;
+  return (
+    <div>
+      {!isArrive ? (
+        <img src={map1} style={{ width: "100%" }} />
+      ) : (
+        <img src={map2} style={{ width: "100%" }} />
+      )}
+    </div>
+  );
 };
 
 export default ReceivePage;

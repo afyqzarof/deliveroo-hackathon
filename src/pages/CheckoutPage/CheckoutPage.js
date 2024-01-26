@@ -50,8 +50,7 @@ export const CheckoutPage = () => {
               onClick={() => {
                 setIsMessage(!isMessage);
                 !isMessage && setWriteMessage(true);
-              }}
-            >
+              }}>
               {" "}
               <span className="plus">{isMessage ? "-" : "+"}</span>{" "}
               {isMessage ? "Remove message" : "Add a personal message"}
@@ -59,8 +58,7 @@ export const CheckoutPage = () => {
             <span
               onClick={() => {
                 isMessage && setWriteMessage(true);
-              }}
-            >
+              }}>
               {isMessage ? "Edit" : "Free"}
             </span>
           </div>
@@ -69,8 +67,7 @@ export const CheckoutPage = () => {
             onClick={() => {
               isBag ? setPrice(price - 1) : setPrice(price + 1);
               setIsBag(!isBag);
-            }}
-          >
+            }}>
             <div className={`${isBag && "remove"}`}>
               {" "}
               <span className="plus">{isBag ? "-" : "+"}</span>{" "}
@@ -88,9 +85,8 @@ export const CheckoutPage = () => {
       <button
         className="cta-address checkout-button"
         onClick={() => {
-          navigate("/receive");
-        }}
-      >
+          navigate("/phone");
+        }}>
         Place delivery order
       </button>
     </main>

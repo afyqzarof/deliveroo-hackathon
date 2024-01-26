@@ -10,6 +10,7 @@ const PhonePage = () => {
       onClick={() => {
         navigate("/receive");
       }}
+      style={{ width: "100%" }}
     />
   );
 };
