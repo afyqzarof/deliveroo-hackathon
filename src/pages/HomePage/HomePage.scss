@@ -1,0 +1,27 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+.home-wrapper {
+  @include flex(column);
+}
+
+.home-hero {
+  background-color: $primary-bg;
+  width: 100%;
+  @include flex;
+  padding: 1rem;
+  cursor: pointer;
+
+  &__border {
+    border: 1px solid $secondary-main;
+    width: 100%;
+    padding: 0.5rem 0;
+    @include flex(row, flex-start);
+  }
+
+  &__text {
+    color: $secondary-main;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-decoration: underline;
+  }
+}
