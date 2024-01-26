@@ -23,7 +23,8 @@ import mixedFlower from "../../assets/images/mixed-flower.png";
 import rose from "../../assets/images/rose.png";
 import { useNavigate } from "react-router-dom";
 import wines from "../../data/wines";
-
+import skins from "../../data/skin-care";
+import featuredImg from "../../assets/images/featured.jpg";
 const GiftPage = () => {
   const navigate = useNavigate();
   const [isForHer, setIsForHer] = useState(false);
@@ -114,6 +115,10 @@ const GiftPage = () => {
                 <h2 className="stuck-title">Stuck on ideas?</h2>
                 <button className="pick-btn">Lets us pick for you</button>
               </div>
+              <div>
+                <h2 className="cat-title">Featured</h2>
+                <img src={featuredImg} />
+              </div>
             </article>
           ) : (
             <article>
@@ -148,13 +153,25 @@ const GiftPage = () => {
                     />
                   )
                 )}
-                {/* <ProductCard />
-                <ProductCard />
-                <ProductCard /> */}
               </div>
               <h2 className="wine">Wine</h2>
               <div className="cat-carousel">
                 {wines.map((flower) => (
+                  <ProductCard
+                    name={flower.name}
+                    shop={flower.shop}
+                    distance={flower.distance}
+                    price={flower.price}
+                    time={flower.time}
+                    imgSrc={flower.imgSrc}
+                    delivery={flower.delivery}
+                  />
+                ))}
+              </div>
+
+              <h2 className="wine">Skin Care</h2>
+              <div className="cat-carousel">
+                {skins.map((flower) => (
                   <ProductCard
                     name={flower.name}
                     shop={flower.shop}
