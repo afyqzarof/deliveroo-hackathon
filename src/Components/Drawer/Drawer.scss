@@ -1,6 +1,21 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variable" as *;
 
+.sel-add-btn {
+  @include flex(row, space-between);
+  max-width: 15rem;
+}
+.sel-add-arrow {
+  margin-left: 0.6rem;
+}
+
+.selected-address {
+  color: #2e3333;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
 .cta-address {
   background-color: $primary-main;
   display: flex;

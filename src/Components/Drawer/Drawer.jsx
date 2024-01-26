@@ -1,8 +1,11 @@
 import { Drawer } from "vaul";
 import "./Drawer.scss";
 import AddressOption from "../AddressOption/AddressOption";
+import { useState } from "react";
+import downArrow from "../../assets/images/down-arrow.svg";
 
 export default function MyDrawer() {
+  const [address, setAddress] = useState(null);
   const locationArray = [
     "Current location",
     "603 Lantana heights, Glasshouse Gardens, London, E20 1HR",
@@ -12,7 +15,14 @@ export default function MyDrawer() {
   return (
     <Drawer.Root>
       <Drawer.Trigger asChild>
-        <button className="cta-address">Change to gift address</button>
+        {!address ? (
+          <button className="cta-address">Change to gift address</button>
+        ) : (
+          <button className="sel-add-btn">
+            <p className="selected-address">{address.split(",")[0]}</p>
+            <img src={downArrow} className="sel-add-arrow" />
+          </button>
+        )}
       </Drawer.Trigger>
       <Drawer.Portal>
         <Drawer.Overlay className="overlay" />
@@ -25,7 +35,12 @@ export default function MyDrawer() {
               </div>
               <form>
                 {locationArray.map((el, index) => (
-                  <AddressOption address={el} id={index} key={el} />
+                  <AddressOption
+                    address={el}
+                    id={index}
+                    key={el}
+                    setAddress={setAddress}
+                  />
                 ))}
               </form>
             </div>
