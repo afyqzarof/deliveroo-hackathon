@@ -3,8 +3,10 @@ import checkoutTop from "../../assets/images/checkoutTop.png";
 import checkoutBot from "../../assets/images/checkoutBot.png";
 import PersonalMessage from "../PersonalMessage/PersonalMessage";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const CheckoutPage = () => {
+  const navigate = useNavigate();
   const [isGift, setIsGift] = useState(false);
   const [isMessage, setIsMessage] = useState(false);
   const [isBag, setIsBag] = useState(false);
@@ -83,7 +85,12 @@ export const CheckoutPage = () => {
         <p className="text2">Total</p>
         <p className="total-price">{`£${parseFloat(price).toFixed(2)}`}</p>
       </div>
-      <button className="cta-address checkout-button">
+      <button
+        className="cta-address checkout-button"
+        onClick={() => {
+          navigate("/receive");
+        }}
+      >
         Place delivery order
       </button>
     </main>

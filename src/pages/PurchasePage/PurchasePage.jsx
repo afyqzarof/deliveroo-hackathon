@@ -17,7 +17,9 @@ const PurchasePage = () => {
         src={purchaseBtm}
         style={{ width: "100%" }}
         className="purchase-btm"
-        onClick={() => {}}
+        onClick={() => {
+          navigate("/basket");
+        }}
       />
     </div>
   );
