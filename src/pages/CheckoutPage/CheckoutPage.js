@@ -1,6 +1,7 @@
 import "./CheckoutPage.scss";
 import checkoutTop from "../../assets/images/checkoutTop.png";
 import checkoutBot from "../../assets/images/checkoutBot.png";
+import PersonalMessage from "../PersonalMessage/PersonalMessage";
 import { useState } from "react";
 
 export const CheckoutPage = () => {
@@ -9,6 +10,16 @@ export const CheckoutPage = () => {
   const [isBag, setIsBag] = useState(false);
   const [price, setPrice] = useState(32);
   const [writeMessage, setWriteMessage] = useState(false);
+  const [message, setMessage] = useState("");
+
+  if (writeMessage)
+    return (
+      <PersonalMessage
+        message={message}
+        setMessage={setMessage}
+        setWriteMessage={setWriteMessage}
+      />
+    );
 
   return (
     <main className="checkoutpage">
@@ -21,6 +32,7 @@ export const CheckoutPage = () => {
           </p>
         </div>
         <input
+          checked={isGift}
           type="checkbox"
           className="checkbox"
           onClick={() => {
