@@ -1,4 +1,4 @@
-import order from "../../assets/images/order.png";
+import order from "../../assets/images/final.png";
 import { useNavigate } from "react-router-dom";
 
 const OrderPage = () => {
