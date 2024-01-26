@@ -11,18 +11,51 @@
 .title {
   height: 4rem;
   width: 24.375rem;
-  border-bottom: 1px solid lightgrey; //review this border color
 }
 
 .ios-keyboard {
   width: 24.375rem;
 }
 
+.body-top {
+  width: 24.375rem;
+  height: 6rem;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 10rem;
+  width: 24.375rem;
+  padding-bottom: 0.2rem;
+
+  &_img {
+    height: 4rem;
+    width: 30%;
+    height: 95%;
+  }
+
+  &_text {
+    width: 50%;
+    height: 95%;
+    border: none;
+    resize: none;
+  }
+}
+
+.brder-btm {
+  width: 24.375rem;
+  height: 3rem;
+}
+
 .save {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 24.375rem;
-  height: 4rem;
+  height: 5rem;
 
   &_button {
     width: 95%;
