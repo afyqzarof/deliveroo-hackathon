@@ -8,10 +8,11 @@ export const CheckoutPage = () => {
   const [isMessage, setIsMessage] = useState(false);
   const [isBag, setIsBag] = useState(false);
   const [price, setPrice] = useState(32);
+  const [writeMessage, setWriteMessage] = useState(false);
 
   return (
     <main className="checkoutpage">
-      <img src={checkoutTop} />
+      <img src={checkoutTop} className="image-checkout" />
       <div className="make-gift">
         <div className="container-1">
           <p className="text1">Make this a gift</p>
@@ -29,18 +30,25 @@ export const CheckoutPage = () => {
       </div>
       {isGift && (
         <div className="options-container">
-          <div
-            className="options"
-            onClick={() => {
-              setIsMessage(!isMessage);
-            }}
-          >
-            <div className={`${isMessage && "remove"}`}>
+          <div className="options">
+            <div
+              className={`${isMessage && "remove"}`}
+              onClick={() => {
+                setIsMessage(!isMessage);
+                !isMessage && setWriteMessage(true);
+              }}
+            >
               {" "}
               <span className="plus">{isMessage ? "-" : "+"}</span>{" "}
               {isMessage ? "Remove message" : "Add a personal message"}
             </div>
-            <span>{isMessage ? "Edit" : "Free"}</span>
+            <span
+              onClick={() => {
+                isMessage && setWriteMessage(true);
+              }}
+            >
+              {isMessage ? "Edit" : "Free"}
+            </span>
           </div>
           <div
             className="options"
@@ -58,7 +66,14 @@ export const CheckoutPage = () => {
           </div>
         </div>
       )}
-      <img src={checkoutBot} />
+      <img src={checkoutBot} className="image-checkout" />
+      <div className="price-container">
+        <p className="text2">Total</p>
+        <p className="total-price">{`£${parseFloat(price).toFixed(2)}`}</p>
+      </div>
+      <button className="cta-address checkout-button">
+        Place delivery order
+      </button>
     </main>
   );
 };

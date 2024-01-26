@@ -54,3 +54,25 @@
 .remove {
   color: red;
 }
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white;
+  width: 100%;
+}
+.total-price {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.image-checkout {
+  width: 100%;
+}
+
+.checkout-button {
+  box-sizing: border-box;
+  margin: 0.5rem 1rem;
+  width: -webkit-fill-available;
+  width: -moz-fill-available;
+}
