@@ -64,8 +64,13 @@
   width: 100%;
   padding: 0.3rem;
   border-radius: 0.1875rem;
-  border: 1px solid #e5e7e6;
-  background: #fff;
+  background: #f4f4ec;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #0c5554;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem; /* 133.333% */
 }
 
 .wine {
