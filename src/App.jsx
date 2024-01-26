@@ -11,6 +11,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/gift" element={<GiftPage />} />
         <Route path="/purchase" element={<PurchasePage />} />
+        <Route path="/receive" element={<ReceivePage />} />
       </Routes>
     </BrowserRouter>
   );
