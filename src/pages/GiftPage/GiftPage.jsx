@@ -79,7 +79,14 @@ const GiftPage = () => {
     <main className="gift-main">
       <div className="background">
         <div className="buffer"></div>
-        <img src={giftHero} alt="" width={"100%"} />
+        <img
+          src={giftHero}
+          alt=""
+          width={"100%"}
+          onClick={() => {
+            navigate("/");
+          }}
+        />
       </div>
       <div className="buffer-down"></div>
       <section className="gift-section">
