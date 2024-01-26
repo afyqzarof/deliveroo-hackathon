@@ -1,0 +1,73 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.background {
+  background-color: #f4f4ec;
+}
+
+.buffer {
+  height: 2rem;
+  background-color: $primary-main;
+  margin: 0;
+  width: 100%;
+}
+
+.buffer-down {
+  height: 2rem;
+  background-color: #f4f4ec;
+  margin: 0;
+  width: 100%;
+}
+
+.gift-section {
+  padding: 0 1rem;
+  background-color: #f9fbfa;
+
+  &__words {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+.translate {
+  transform: translateY(-2rem);
+}
+
+.cat-title {
+  margin: 1.5rem 0;
+  font-size: 1.125rem;
+}
+
+.btn-wrapper {
+  border-radius: 0.3125rem;
+  background: #fff;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  @include flex(row, space-between);
+  padding: 1rem;
+}
+
+.cat-carousel {
+  max-width: 100%;
+  @include flex(row, space-between);
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.stuck-title {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.pick-btn {
+  width: 100%;
+  padding: 0.3rem;
+  border-radius: 0.1875rem;
+  border: 1px solid #e5e7e6;
+  background: #fff;
+}
+
+.wine {
+  margin: 1rem 0 0.5rem 0;
+}

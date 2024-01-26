@@ -1,5 +1,52 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variable" as *;
+.her-title-wrapper {
+  @include flex(row, space-between);
+  padding: 0 0.3rem;
+}
+
+.flowers {
+  margin-bottom: 0.5rem;
+}
+
+.her-title {
+  color: #0e5454;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.5rem;
+  margin: 1rem 0;
+}
+
+.sel-add-btn {
+  @include flex(row, space-between);
+  max-width: 15rem;
+}
+.sel-add-arrow {
+  margin-left: 0.6rem;
+}
+
+.selected-address {
+  color: #2e3333;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.cta-address {
+  background-color: $primary-main;
+  display: flex;
+  width: 12.8125rem;
+  height: 2.5rem;
+  padding: 0.5rem 0rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
 
 .overlay {
   position: fixed;
